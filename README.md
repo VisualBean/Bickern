@@ -2,6 +2,6 @@
 AnvilForMac - For Windows!
 
 TODO:
- [ ] Add Config File
- [ ] Upload App
- [ ] Release Version 1.0
+- [ ] Add Config File
+- [ ] Upload App
+- [ ] Release Version 1.0
