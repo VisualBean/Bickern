@@ -1,5 +1,5 @@
 # Bickern
-A static file server.
+A static file "server".
 
 Will serve directories that has either of the following files
 "index.html",
