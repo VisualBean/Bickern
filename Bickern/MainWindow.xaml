@@ -27,6 +27,11 @@
         </Grid.ColumnDefinitions>
 
         <tb:TaskbarIcon IconSource="images\anvil.ico">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="{Binding Path=QuitCommand}" Header="Quit" />
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
             <tb:TaskbarIcon.TrayPopup>
                 <Border
                     Grid.ColumnSpan="2"

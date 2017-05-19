@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
+using System;
 
 namespace Bickern.ViewModel
 {
@@ -34,14 +35,20 @@ namespace Bickern.ViewModel
             ActiveSites = new ObservableCollection<LocalSite>(sites);
             OpenUrlCommand = new RelayCommand<string>(OpenUrl);
             RemoveSiteCommand = new RelayCommand<LocalSite>(RemoveSite);
+            QuitCommand = new RelayCommand(Quit);
             AddSiteCommand = new RelayCommand(AddSite);
             
+        }
+
+        private void Quit()
+        {
+            Application.Current.Shutdown();
         }
 
         public ObservableCollection<LocalSite> ActiveSites { get => activeSites; set { activeSites = value; RaisePropertyChanged("ActiveSites"); ActiveSitesChanged(); } }
 
         public RelayCommand AddSiteCommand { get; set; }
-
+        public RelayCommand QuitCommand { get; set; }
         public bool IsServing { get => isServing; set { isServing = value; RaisePropertyChanged(); ChangedServeState(isServing); } }
 
         public RelayCommand<string> OpenUrlCommand { get; set; }
