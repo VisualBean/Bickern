@@ -29,7 +29,7 @@
         <tb:TaskbarIcon IconSource="images\anvil.ico">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Command="{Binding Path=QuitCommand}" Header="Quit" />
+                    <MenuItem Command="{Binding QuitCommand}" Header="Quit" />
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>
             <tb:TaskbarIcon.TrayPopup>
@@ -47,7 +47,7 @@
                                 <ToggleButton
                                     Margin="5,0,0,0"
                                     HorizontalAlignment="Left"
-                                    IsChecked="{Binding Path=IsServing}" />
+                                    IsChecked="{Binding IsServing}" />
                                 <TextBlock
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
@@ -79,7 +79,7 @@
                             MinHeight="20"
                             HorizontalContentAlignment="Stretch"
                             Background="Transparent"
-                            ItemsSource="{Binding Path=ActiveSites}"
+                            ItemsSource="{Binding ActiveSites}"
                             SelectionMode="Single">
                             <ListView.Resources>
                                 <Style TargetType="{x:Type GridViewColumnHeader}">

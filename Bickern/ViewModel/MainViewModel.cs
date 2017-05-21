@@ -31,8 +31,10 @@ namespace Bickern.ViewModel
             IsServing = true;
 
             var sites = ReadSitesConfig();
-
-            ActiveSites = new ObservableCollection<LocalSite>(sites);
+            if (sites == null)
+                ActiveSites = new ObservableCollection<LocalSite>();
+            else
+                ActiveSites = new ObservableCollection<LocalSite>(sites);
             OpenUrlCommand = new RelayCommand<string>(OpenUrl);
             RemoveSiteCommand = new RelayCommand<LocalSite>(RemoveSite);
             QuitCommand = new RelayCommand(Quit);
@@ -55,10 +57,7 @@ namespace Bickern.ViewModel
 
         public RelayCommand<LocalSite> RemoveSiteCommand { get; set; }
 
-        private void CreateInitialSiteList()
-        {
-            var sites = siteArchive.GetArchivedSites();
-        }
+
         private void ActiveSitesChanged()
         {
 
@@ -114,6 +113,7 @@ namespace Bickern.ViewModel
             else
             {
                 var sites = ReadSitesConfig();
+                if(sites != null)
                 ActiveSites = new ObservableCollection<LocalSite>(sites);
                 
             }
@@ -127,6 +127,8 @@ namespace Bickern.ViewModel
         private IEnumerable<LocalSite> ReadSitesConfig()
         {
             var sites = siteArchive.GetArchivedSites();
+            if (sites == null)
+                return null;
             var localSites = new List<LocalSite>();
             foreach (var site in sites)
             {

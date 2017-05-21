@@ -20,6 +20,8 @@ namespace Bickern.Services
 
         public IEnumerable<(string path, string url, string ip)> GetArchivedSites()
         {
+            if (!File.Exists(sitesConfigPath))
+                return null;
             var text = File.ReadAllText(sitesConfigPath);
             var sites = JsonConvert.DeserializeObject<IEnumerable<(string path, string url, string ip)>>(text);
             return sites;
