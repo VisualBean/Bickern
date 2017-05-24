@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/VisualBean/Bickern.svg?branch=master)](https://travis-ci.org/VisualBean/Bickern)
+
 # Bickern
 A static file "server".
 It exists as a tray application:
