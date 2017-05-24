@@ -1,4 +1,4 @@
-
+[![Build status](https://ci.appveyor.com/api/projects/status/a0vcwwelvrwsm998?svg=true)](https://ci.appveyor.com/project/alexintime/bickern)
 # Bickern
 A static file "server".
 It exists as a tray application:
