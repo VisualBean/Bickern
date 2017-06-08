@@ -1,5 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/a0vcwwelvrwsm998/branch/master?svg=true)](https://ci.appveyor.com/project/alexintime/bickern/branch/master)
 
+Very similar to Anvil for mac, but for Windows instead.
+
 # Bickern
 A static file "server".
 It exists as a tray application:
