@@ -15,7 +15,8 @@ Left click the anvil icon in your tray bar.
 Press the plus icon.
 Give it a name and find path to a folder you want to serve.
 Et voila. either press the entry in the list or navigate with your browser to that url.
----
+
+***
 
 Will serve directories that has either of the following files
  + index.html
