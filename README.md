@@ -6,18 +6,22 @@ Very similar to Anvil for mac, but for Windows instead.
 A static file "server".
 It exists as a tray application:
 
+![alt text](http://visualbean.io/wp-content/uploads/2017/07/bickern.png "bickern window")
+
+
+---
 HowTo:
 Left click the anvil icon in your tray bar.
 Press the plus icon.
 Give it a name and find path to a folder you want to serve.
 Et voila. either press the entry in the list or navigate with your browser to that url.
-
+---
 
 Will serve directories that has either of the following files
-"index.html",
-"index.htm",
-"default.html",
-"default.htm"
+ + index.html
+ + index.htm
+ + default.html
+ + default.htm
 
 It will map it to a local "dns"-address of choice. I.E - mycatsite.dev
 
