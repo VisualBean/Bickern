@@ -92,16 +92,27 @@
                                     <GridViewColumn Width="{Binding ElementName=helperField, Path=ActualWidth}">
                                         <GridViewColumn.CellTemplate>
                                             <DataTemplate>
-                                                <Button
+                                                <Button Width="250" Content="{Binding Path=Url}"
                                                     Command="{Binding DataContext.OpenUrlCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}"
                                                     CommandParameter="{Binding Path=Url}"
                                                     Style="{DynamicResource MaterialDesignToolButton}">
-                                                    <TextBlock
-                                                        HorizontalAlignment="Center"
-                                                        VerticalAlignment="Center"
-                                                        FontWeight="Bold"
-                                                        Text="{Binding Path=Url}"
-                                                        TextTrimming="CharacterEllipsis" />
+                                                       <Button.Template>
+                                                        <ControlTemplate TargetType="{x:Type Button}">
+                                                            <Grid>
+                                                                <Border Background="{TemplateBinding Background}"
+                                                                 BorderBrush="{TemplateBinding BorderBrush}"
+                                                                 BorderThickness="{TemplateBinding BorderThickness}">
+                                                                    <Grid>
+                                                                        <Grid.ColumnDefinitions>
+                                                                            <ColumnDefinition Width="Auto"/>
+                                                                        </Grid.ColumnDefinitions>
+                                                                        <ContentPresenter HorizontalAlignment="Left"  Grid.Column="0"
+                                                                                  VerticalAlignment="Center"/>
+                                                                    </Grid>
+                                                                </Border>
+                                                            </Grid>
+                                                        </ControlTemplate>
+                                                    </Button.Template>          
                                                 </Button>
                                             </DataTemplate>
                                         </GridViewColumn.CellTemplate>
