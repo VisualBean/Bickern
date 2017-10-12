@@ -1,5 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/a0vcwwelvrwsm998/branch/master?svg=true)](https://ci.appveyor.com/project/alexintime/bickern/branch/master)
-
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FVisualBean%2FBickern.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FVisualBean%2FBickern?ref=badge_shield)
 Very similar to Anvil for mac, but for Windows instead.
 
 # Bickern
